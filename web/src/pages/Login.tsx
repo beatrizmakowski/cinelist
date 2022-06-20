@@ -11,7 +11,8 @@ import {
     LogoTypography, 
     BackgroundContainer,
     BackgroundBox,
-    FormBackgroundPaper
+    FormBackgroundPaper,
+    FormButton,
 } from "./LoginAndRegistrationStyles"
 
 export function Login() {
@@ -31,18 +32,13 @@ export function Login() {
                                 defaultValue={"Insira a senha aqui"}
                                 sx={{ input: { color: 'white' } }}
                             />
-                            <Button 
-                                variant={"contained"}
-                                sx={{
-                                    padding: "22px 169px"
-                                }}
-                            >
+                            <FormButton variant={"contained"}>
                                 <Typography variant="subtitle1">Fazer Login</Typography>
-                            </Button>
+                            </FormButton>
                             <Typography align="left" >Não tem uma conta? Crie agora!</Typography>
-                            <Button variant={"contained"}>
+                            <FormButton variant={"contained"}>
                                 <Typography variant="subtitle1">Registrar uma conta</Typography>
-                            </Button>
+                            </FormButton>
                         </Stack>
                     </FormBackgroundPaper>
                 </Box>

@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Typography, Container, Box, Paper } from "@mui/material";
+import { Typography, Container, Box, Paper, Button } from "@mui/material";
 import backgroundImage from "../assets/backgroundImage.png"
 
 export const LogoTypography = styled(Typography, {})({
@@ -34,4 +34,10 @@ export const FormBackgroundPaper = styled(Paper, {})({
     color: "white",
     padding: "43px 49px",
     width: "524px",
+});
+
+export const FormButton = styled(Button, {})({
+    padding: "22px 169px",
+    backgroundColor: "#0069FF",
+    textTransform: "none",
 });
