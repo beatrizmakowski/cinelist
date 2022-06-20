@@ -7,25 +7,14 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import { LogoTypography } from "./LoginAndRegistrationStyles"
-import backgroundImage from "../assets/backgroundImage.png"
-
-const styles = {
-    backgroundContainer: {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#252B3A',
-        height: '100vh',
-        width: 'auto',
-        minWidth: '100vw',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-    }
-};
+import { 
+    LogoTypography, 
+    BackgroundContainer 
+} from "./LoginAndRegistrationStyles"
 
 export function Login() {
     return (
-        <Container style={styles.backgroundContainer}>
+        <BackgroundContainer>
             <Box
                 sx={{ 
                     height: "100vh",
@@ -71,6 +60,6 @@ export function Login() {
                     </Paper>
                 </Box>
             </Box>
-        </Container>
+        </BackgroundContainer>
     );
 }
