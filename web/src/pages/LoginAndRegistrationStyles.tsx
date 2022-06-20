@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Typography, Container, Box } from "@mui/material";
+import { Typography, Container, Box, Paper } from "@mui/material";
 import backgroundImage from "../assets/backgroundImage.png"
 
 export const LogoTypography = styled(Typography, {})({
@@ -7,6 +7,7 @@ export const LogoTypography = styled(Typography, {})({
     fontFamily: "Just Another Hand",
     fontWeight: 400,
     fontSize: "96px",
+    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 });
 
 export const BackgroundContainer = styled(Container, {})({
@@ -23,6 +24,14 @@ export const BackgroundContainer = styled(Container, {})({
 export const BackgroundBox = styled(Box, {})({
     height: "100vh",
     display: "flex",
-    alignItems: "center",
+    paddingTop: "5vh",
     justifyContent: "space-evenly"
+});
+
+export const BackgroundPaper = styled(Paper, {})({
+    borderRadius: "28px",
+    backgroundColor: "rgba(18, 15, 51, 0.95)",
+    color: "white",
+    padding: "43px 49px",
+    width: "524px",
 });

@@ -10,7 +10,8 @@ import {
 import { 
     LogoTypography, 
     BackgroundContainer,
-    BackgroundBox
+    BackgroundBox,
+    BackgroundPaper
 } from "./LoginAndRegistrationStyles"
 
 export function Login() {
@@ -19,15 +20,7 @@ export function Login() {
             <BackgroundBox>
                 <Box>
                     <LogoTypography>The CineList</LogoTypography>
-                    <Paper elevation={1} 
-                        sx={{
-                            borderRadius: "28px",
-                            bgcolor: "rgba(18, 15, 51, 0.95)",
-                            color: "white",
-                            padding: "43px 49px",
-                            width: "524px"
-                        }}
-                    >
+                    <BackgroundPaper elevation={1}>
                         <Stack direction={"column"} spacing={4}>
                             <Typography variant="h4">Faça o login</Typography>
                             <TextField 
@@ -51,7 +44,7 @@ export function Login() {
                                 <Typography variant="subtitle1">Registrar uma conta</Typography>
                             </Button>
                         </Stack>
-                    </Paper>
+                    </BackgroundPaper>
                 </Box>
             </BackgroundBox>
         </BackgroundContainer>
