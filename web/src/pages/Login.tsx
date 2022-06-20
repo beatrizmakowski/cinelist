@@ -6,17 +6,9 @@ import {
     Stack,
     TextField,
     Typography,
-    makeStyles
 } from "@mui/material";
-import { height, styled } from "@mui/system";
+import { LogoTypography } from "./LoginAndRegistrationStyles"
 import backgroundImage from "../assets/backgroundImage.png"
-
-const LogoTypography = styled(Typography, {})({
-    color: "#FFF500",
-    fontFamily: "Just Another Hand",
-    fontWeight: 400,
-    fontSize: "96px",
-});
 
 const styles = {
     backgroundContainer: {
