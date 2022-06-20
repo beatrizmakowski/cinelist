@@ -23,7 +23,16 @@ export function Login() {
                     <LogoTypography>The CineList</LogoTypography>
                     <FormBackgroundPaper elevation={1}>
                         <Stack direction={"column"} spacing={4}>
-                            <Typography variant="h4" align="left" >Faça o login</Typography>
+                            <Typography 
+                                variant="h4" 
+                                align="left"
+                                sx={{ 
+                                    fontFamily: 'Inter', 
+                                    marginBottom: '65px' 
+                                }}
+                            >
+                                    Faça o login
+                            </Typography>
                             <TextField 
                                 defaultValue={"Insira o email aqui"}
                                 sx={{ input: { color: 'white' }}}
