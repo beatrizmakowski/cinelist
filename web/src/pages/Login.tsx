@@ -42,11 +42,11 @@ export function Login() {
                                 sx={{ input: { color: 'white' } }}
                             />
                             <Button variant={"contained"}>
-                                <Typography variant="s1">Fazer Login</Typography>
+                                <Typography variant="subtitle1">Fazer Login</Typography>
                             </Button>
                             <Typography>Não tem uma conta? Crie agora!</Typography>
                             <Button variant={"contained"}>
-                                <Typography variant="s1">Registrar uma conta</Typography>
+                                <Typography variant="subtitle1">Registrar uma conta</Typography>
                             </Button>
                         </Stack>
                     </Paper>
