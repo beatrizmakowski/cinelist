@@ -11,7 +11,7 @@ import {
     LogoTypography, 
     BackgroundContainer,
     BackgroundBox,
-    BackgroundPaper
+    FormBackgroundPaper
 } from "./LoginAndRegistrationStyles"
 
 export function Login() {
@@ -20,9 +20,9 @@ export function Login() {
             <BackgroundBox>
                 <Box>
                     <LogoTypography>The CineList</LogoTypography>
-                    <BackgroundPaper elevation={1}>
+                    <FormBackgroundPaper elevation={1}>
                         <Stack direction={"column"} spacing={4}>
-                            <Typography variant="h4">Faça o login</Typography>
+                            <Typography variant="h4" align="left" >Faça o login</Typography>
                             <TextField 
                                 defaultValue={"Insira o email aqui"}
                                 sx={{ input: { color: 'white' }}}
@@ -39,12 +39,12 @@ export function Login() {
                             >
                                 <Typography variant="subtitle1">Fazer Login</Typography>
                             </Button>
-                            <Typography>Não tem uma conta? Crie agora!</Typography>
+                            <Typography align="left" >Não tem uma conta? Crie agora!</Typography>
                             <Button variant={"contained"}>
                                 <Typography variant="subtitle1">Registrar uma conta</Typography>
                             </Button>
                         </Stack>
-                    </BackgroundPaper>
+                    </FormBackgroundPaper>
                 </Box>
             </BackgroundBox>
         </BackgroundContainer>

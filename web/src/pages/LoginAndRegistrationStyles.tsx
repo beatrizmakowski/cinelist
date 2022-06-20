@@ -28,7 +28,7 @@ export const BackgroundBox = styled(Box, {})({
     justifyContent: "space-evenly"
 });
 
-export const BackgroundPaper = styled(Paper, {})({
+export const FormBackgroundPaper = styled(Paper, {})({
     borderRadius: "28px",
     backgroundColor: "rgba(18, 15, 51, 0.95)",
     color: "white",
