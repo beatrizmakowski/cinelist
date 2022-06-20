@@ -5,7 +5,7 @@ import { Registration } from './pages/Registration'
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Inter',
+    fontFamily: 'Inter'
   },
   components: {
     MuiCssBaseline: {
@@ -23,7 +23,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-          <Login />
           <Registration />
       </div>
     </ThemeProvider>
