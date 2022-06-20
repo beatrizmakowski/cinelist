@@ -9,20 +9,14 @@ import {
 } from "@mui/material";
 import { 
     LogoTypography, 
-    BackgroundContainer 
+    BackgroundContainer,
+    BackgroundBox
 } from "./LoginAndRegistrationStyles"
 
 export function Login() {
     return (
         <BackgroundContainer>
-            <Box
-                sx={{ 
-                    height: "100vh",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-evenly"
-                }}
-            >
+            <BackgroundBox>
                 <Box>
                     <LogoTypography>The CineList</LogoTypography>
                     <Paper elevation={1} 
@@ -59,7 +53,7 @@ export function Login() {
                         </Stack>
                     </Paper>
                 </Box>
-            </Box>
+            </BackgroundBox>
         </BackgroundContainer>
     );
 }

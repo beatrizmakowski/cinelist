@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { Typography, Container, Box } from "@mui/material";
 import backgroundImage from "../assets/backgroundImage.png"
 
 export const LogoTypography = styled(Typography, {})({
@@ -18,4 +18,11 @@ export const BackgroundContainer = styled(Container, {})({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+});
+
+export const BackgroundBox = styled(Box, {})({
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-evenly"
 });
