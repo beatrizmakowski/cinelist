@@ -34,13 +34,14 @@ export const FormBackgroundPaper = styled(Paper, {})({
     color: "white",
     padding: "43px 60px 49px 49px",
     width: "524px",
-    fontFamily: "Inter",
 });
 
 export const FormButton = styled(Button, {})({
-    padding: "22px 169px",
+    height: "64px",
+    padding: "0px 169px",
     backgroundColor: "#0069FF",
     textTransform: "none",
+    marginTop: 0,
 });
 
 export const FormTextField = styled(InputBase, {})({

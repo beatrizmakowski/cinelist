@@ -25,7 +25,8 @@ export function Login() {
                                 variant="h4" 
                                 align="left"
                                 sx={{ 
-                                    fontFamily: 'Inter', 
+                                    fontSize: '30px', 
+                                    fontWeight: 700,
                                     marginBottom: '65px' 
                                 }}
                             >
@@ -37,7 +38,10 @@ export function Login() {
                                 <Typography variant="subtitle1">Fazer Login</Typography>
                             </FormButton>
                             <Typography align="left" >Não tem uma conta? Crie agora!</Typography>
-                            <FormButton variant={"contained"}>
+                            <FormButton 
+                                variant={"contained"}
+                                style={{ marginTop: 8}}
+                            >
                                 <Typography variant="subtitle1">Registrar uma conta</Typography>
                             </FormButton>
                         </Stack>
