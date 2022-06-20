@@ -32,7 +32,7 @@ export const FormBackgroundPaper = styled(Paper, {})({
     borderRadius: "28px",
     backgroundColor: "rgba(18, 15, 51, 0.95)",
     color: "white",
-    padding: "43px 49px",
+    padding: "43px 60px 49px 49px",
     width: "524px",
 });
 
