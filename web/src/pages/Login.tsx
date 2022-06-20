@@ -32,11 +32,8 @@ const styles = {
 };
 
 export function Login() {
-
     return (
-        <Container
-            style={styles.backgroundContainer}   
-        >
+        <Container style={styles.backgroundContainer}>
             <Box
                 sx={{ 
                     height: "100vh",
@@ -51,7 +48,9 @@ export function Login() {
                         sx={{
                             borderRadius: "28px",
                             bgcolor: "rgba(18, 15, 51, 0.95)",
-                            color: "white"
+                            color: "white",
+                            padding: "43px 49px",
+                            width: "524px"
                         }}
                     >
                         <Stack direction={"column"} spacing={4}>
@@ -64,7 +63,12 @@ export function Login() {
                                 defaultValue={"Insira a senha aqui"}
                                 sx={{ input: { color: 'white' } }}
                             />
-                            <Button variant={"contained"}>
+                            <Button 
+                                variant={"contained"}
+                                sx={{
+                                    padding: "22px 169px"
+                                }}
+                            >
                                 <Typography variant="subtitle1">Fazer Login</Typography>
                             </Button>
                             <Typography>Não tem uma conta? Crie agora!</Typography>
