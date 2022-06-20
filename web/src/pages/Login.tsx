@@ -8,12 +8,35 @@ import {
     Typography,
     makeStyles
 } from "@mui/material";
+import { height, styled } from "@mui/system";
+import backgroundImage from "../assets/backgroundImage.png"
 
+const LogoTypography = styled(Typography, {})({
+    color: "#FFF500",
+    fontFamily: "Just Another Hand",
+    fontWeight: 400,
+    fontSize: "96px",
+});
+
+const styles = {
+    backgroundContainer: {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundColor: '#252B3A',
+        height: '100vh',
+        width: 'auto',
+        minWidth: '100vw',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+    }
+};
 
 export function Login() {
 
     return (
-        <Container>
+        <Container
+            style={styles.backgroundContainer}   
+        >
             <Box
                 sx={{ 
                     height: "100vh",
@@ -23,7 +46,7 @@ export function Login() {
                 }}
             >
                 <Box>
-                    <Typography variant="h1">The CineList</Typography>
+                    <LogoTypography>The CineList</LogoTypography>
                     <Paper elevation={1} 
                         sx={{
                             borderRadius: "28px",
