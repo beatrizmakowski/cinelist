@@ -1,8 +1,5 @@
 import {
     Box,
-    Button,
-    Container,
-    Paper,
     Stack,
     TextField,
     Typography,
@@ -13,6 +10,7 @@ import {
     BackgroundBox,
     FormBackgroundPaper,
     FormButton,
+    FormTextField
 } from "./LoginAndRegistrationStyles"
 
 export function Login() {
@@ -33,14 +31,8 @@ export function Login() {
                             >
                                     Faça o login
                             </Typography>
-                            <TextField 
-                                defaultValue={"Insira o email aqui"}
-                                sx={{ input: { color: 'white' }}}
-                            />
-                            <TextField 
-                                defaultValue={"Insira a senha aqui"}
-                                sx={{ input: { color: 'white' } }}
-                            />
+                            <FormTextField defaultValue={"Insira o email aqui"} />
+                            <FormTextField defaultValue={"Insira a senha aqui"} />
                             <FormButton variant={"contained"}>
                                 <Typography variant="subtitle1">Fazer Login</Typography>
                             </FormButton>
