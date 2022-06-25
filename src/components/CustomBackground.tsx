@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import backgroundImage from '../assets/backgroundImage.png';
 
-export function LoginAndRegistrationBackground(props:any) {
+export function CustomBackground(props:any) {
     return (
         <Container
             sx={{

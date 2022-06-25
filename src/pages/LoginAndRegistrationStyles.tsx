@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Typography, Container, Box, Paper, Button, InputBase } from "@mui/material";
+import { Box, Paper, Button, InputBase } from "@mui/material";
 
 
 export const BackgroundBox = styled(Box, {})({
