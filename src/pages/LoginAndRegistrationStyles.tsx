@@ -1,14 +1,6 @@
 import { styled } from "@mui/system";
 import { Typography, Container, Box, Paper, Button, InputBase } from "@mui/material";
-import backgroundImage from "../assets/backgroundImage.png"
 
-export const LogoTypography = styled(Typography, {})({
-    color: "#FFF500",
-    fontFamily: "Just Another Hand",
-    fontWeight: 400,
-    fontSize: "96px",
-    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-});
 
 export const BackgroundBox = styled(Box, {})({
     height: "100vh",

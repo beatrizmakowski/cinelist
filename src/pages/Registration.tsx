@@ -4,8 +4,8 @@ import {
     Typography,
 } from "@mui/material";
 import { LoginAndRegistrationBackground } from "../components/LoginAndRegistrationBackground";
+import { CustomLogo } from "../components/CustomLogo";
 import { 
-    LogoTypography, 
     BackgroundBox,
     FormBackgroundPaper,
     FormButton,
@@ -17,7 +17,7 @@ export function Registration() {
         <LoginAndRegistrationBackground>
             <BackgroundBox>
                 <Box>
-                    <LogoTypography>The CineList</LogoTypography>
+                    <CustomLogo />
                     <FormBackgroundPaper elevation={1}>
                         <Stack direction={"column"} spacing={4}>
                             <Typography 
