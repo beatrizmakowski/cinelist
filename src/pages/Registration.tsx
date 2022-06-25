@@ -4,14 +4,16 @@ import {
     Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { CustomBackground } from "../components/CustomBackground";
-import { CustomLogo } from "../components/CustomLogo";
-import { CustomButton } from "../components/CustomButton";
-import { CustomFormTextField } from "../components/CustomFormTextField";
 import { 
     BackgroundBox,
-    FormBackgroundPaper,
 } from "./LoginAndRegistrationStyles"
+
+// Components
+import { CustomBackground } from "../components/CustomBackground";
+import { CustomPaper } from "../components/CustomPaper";
+import { CustomLogo } from "../components/CustomLogo";
+import { CustomFormTextField } from "../components/CustomFormTextField";
+import { CustomButton } from "../components/CustomButton";
 
 export function Registration() {
     const navigate = useNavigate();
@@ -20,7 +22,7 @@ export function Registration() {
             <BackgroundBox>
                 <Box>
                     <CustomLogo />
-                    <FormBackgroundPaper elevation={1}>
+                    <CustomPaper>
                         <Stack direction={"column"} spacing={4}>
                             <Typography 
                                 variant="h4" 
@@ -50,7 +52,7 @@ export function Registration() {
                                 sx={{ marginTop: 8 }}
                             />
                         </Stack>
-                    </FormBackgroundPaper>
+                    </CustomPaper>
                 </Box>
             </BackgroundBox>
         </CustomBackground>
