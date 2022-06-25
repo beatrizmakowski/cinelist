@@ -3,9 +3,9 @@ import {
     Stack,
     Typography,
 } from "@mui/material";
+import { LoginAndRegistrationBackground } from "../components/LoginAndRegistrationBackground";
 import { 
     LogoTypography, 
-    BackgroundContainer,
     BackgroundBox,
     FormBackgroundPaper,
     FormButton,
@@ -14,7 +14,7 @@ import {
 
 export function Registration() {
     return (
-        <BackgroundContainer>
+        <LoginAndRegistrationBackground>
             <BackgroundBox>
                 <Box>
                     <LogoTypography>The CineList</LogoTypography>
@@ -47,6 +47,6 @@ export function Registration() {
                     </FormBackgroundPaper>
                 </Box>
             </BackgroundBox>
-        </BackgroundContainer>
+        </LoginAndRegistrationBackground>
     );
 }

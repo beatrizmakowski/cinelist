@@ -1,9 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../components/CustomButton";
+import { LoginAndRegistrationBackground } from "../components/LoginAndRegistrationBackground";
 import {
   LogoTypography,
-  BackgroundContainer,
   BackgroundBox,
   FormBackgroundPaper,
   FormButton,
@@ -13,7 +13,7 @@ import {
 export function Login() {
   const navigate = useNavigate();
   return (
-    <BackgroundContainer>
+    <LoginAndRegistrationBackground>
       <BackgroundBox>
         <Box>
           <LogoTypography>The CineList</LogoTypography>
@@ -50,6 +50,6 @@ export function Login() {
           </FormBackgroundPaper>
         </Box>
       </BackgroundBox>
-    </BackgroundContainer>
+    </LoginAndRegistrationBackground>
   );
 }

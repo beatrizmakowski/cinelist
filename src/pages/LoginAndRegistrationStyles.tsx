@@ -10,17 +10,6 @@ export const LogoTypography = styled(Typography, {})({
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 });
 
-export const BackgroundContainer = styled(Container, {})({
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#252B3A',
-    height: '100vh',
-    width: 'auto',
-    minWidth: '100vw',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-});
-
 export const BackgroundBox = styled(Box, {})({
     height: "100vh",
     display: "flex",
