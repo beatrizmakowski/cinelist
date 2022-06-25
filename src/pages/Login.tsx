@@ -6,7 +6,6 @@ import { CustomLogo } from "../components/CustomLogo";
 import {
   BackgroundBox,
   FormBackgroundPaper,
-  FormButton,
   FormTextField,
 } from "./LoginAndRegistrationStyles";
 
@@ -32,13 +31,15 @@ export function Login() {
               </Typography>
               <FormTextField defaultValue={"Insira o email aqui"} />
               <FormTextField defaultValue={"Insira a senha aqui"} />
-              <FormButton variant={"contained"}>
-                <Typography variant="subtitle1">Fazer Login</Typography>
-              </FormButton>
+              <CustomButton
+                onClick={() => {
+                  navigate("/");
+                }}
+                label="Fazer Login"
+              />
               <Typography align="left">
                 Não tem uma conta? Crie agora!
               </Typography>
-
               <CustomButton
                 onClick={() => {
                   navigate("/registration");

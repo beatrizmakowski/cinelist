@@ -3,16 +3,18 @@ import {
     Stack,
     Typography,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { LoginAndRegistrationBackground } from "../components/LoginAndRegistrationBackground";
 import { CustomLogo } from "../components/CustomLogo";
+import { CustomButton } from "../components/CustomButton";
 import { 
     BackgroundBox,
     FormBackgroundPaper,
-    FormButton,
     FormTextField
 } from "./LoginAndRegistrationStyles"
 
 export function Registration() {
+    const navigate = useNavigate();
     return (
         <LoginAndRegistrationBackground>
             <BackgroundBox>
@@ -40,9 +42,13 @@ export function Registration() {
                                     marginTop: 1 }}
                             >A senha deve conter no mínimo 8 letras</Typography>
                             <FormTextField defaultValue={"Confirme a senha"} />
-                            <FormButton variant={"contained"}>
-                                <Typography variant="subtitle1">Realizar Cadastro</Typography>
-                            </FormButton>
+                            <CustomButton
+                                onClick={() => {
+                                    navigate("/");
+                                }}
+                                label="Realizar Cadastro"
+                                sx={{ marginTop: 8 }}
+                            />
                         </Stack>
                     </FormBackgroundPaper>
                 </Box>
