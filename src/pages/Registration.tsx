@@ -1,14 +1,15 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import {
+  CustomBackground,
+  CustomBackgroundBox,
+  CustomLogo,
+  CustomPaper,
+  CustomFormTextField,
+  CustomButton,
+} from "../components";
 
 // Components
-import { CustomBackground } from "../components/CustomBackground";
-import { CustomBackgroundBox } from "../components/CustomBackgroundBox";
-import { CustomPaper } from "../components/CustomPaper";
-import { CustomLogo } from "../components/CustomLogo";
-import { CustomFormTextField } from "../components/CustomFormTextField";
-import { CustomButton } from "../components/CustomButton";
-
 export function Registration() {
   const navigate = useNavigate();
   return (
