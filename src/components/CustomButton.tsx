@@ -16,6 +16,7 @@ export function CustomButton({ label, sx, onClick }: CustomButtonProps) {
         padding: "0px 169px",
         backgroundColor: "#0069FF",
         textTransform: "none",
+        whiteSpace: "nowrap",
         ...sx,
       }}
     >
