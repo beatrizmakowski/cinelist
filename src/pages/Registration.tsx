@@ -4,12 +4,10 @@ import {
     Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { 
-    BackgroundBox,
-} from "./LoginAndRegistrationStyles"
 
 // Components
 import { CustomBackground } from "../components/CustomBackground";
+import { CustomBackgroundBox } from "../components/CustomBackgroundBox";
 import { CustomPaper } from "../components/CustomPaper";
 import { CustomLogo } from "../components/CustomLogo";
 import { CustomFormTextField } from "../components/CustomFormTextField";
@@ -19,7 +17,7 @@ export function Registration() {
     const navigate = useNavigate();
     return (
         <CustomBackground>
-            <BackgroundBox>
+            <CustomBackgroundBox>
                 <Box>
                     <CustomLogo />
                     <CustomPaper>
@@ -54,7 +52,7 @@ export function Registration() {
                         </Stack>
                     </CustomPaper>
                 </Box>
-            </BackgroundBox>
+            </CustomBackgroundBox>
         </CustomBackground>
     );
 }
