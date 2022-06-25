@@ -17,14 +17,13 @@ export function Login() {
         <Box>
           <CustomLogo />
           <CustomPaper>
-            <Stack direction={"column"} spacing={4}>
+            <Stack direction={"column"} spacing={{ xs: 2, xl: 4 }}>
               <Typography
                 variant="h4"
                 align="left"
                 sx={{
                   fontSize: "30px",
                   fontWeight: 700,
-                  marginBottom: "65px",
                 }}
               >
                 Faça o login
@@ -37,16 +36,24 @@ export function Login() {
                 }}
                 label="Fazer Login"
               />
-              <Typography align="left">
-                Não tem uma conta? Crie agora!
-              </Typography>
-              <CustomButton
-                onClick={() => {
-                  navigate("/registration");
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "fit-content",
+                  gap: "18px",
                 }}
-                label="Registrar uma conta"
-                sx={{ marginTop: 8 }}
-              />
+              >
+                <Typography align="left">
+                  Não tem uma conta? Crie agora!
+                </Typography>
+                <CustomButton
+                  onClick={() => {
+                    navigate("/registration");
+                  }}
+                  label="Registrar uma conta"
+                />
+              </Box>
             </Stack>
           </CustomPaper>
         </Box>

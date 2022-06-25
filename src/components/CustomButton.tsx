@@ -13,7 +13,8 @@ export function CustomButton({ label, sx, onClick }: CustomButtonProps) {
       variant={"contained"}
       sx={{
         height: "64px",
-        padding: "0px 169px",
+        width: "426px",
+        maxWidth: "100%",
         backgroundColor: "#0069FF",
         textTransform: "none",
         whiteSpace: "nowrap",
