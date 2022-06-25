@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { CustomBackground } from "../components/CustomBackground";
 import { CustomLogo } from "../components/CustomLogo";
 import { CustomButton } from "../components/CustomButton";
+import { CustomFormTextField } from "../components/CustomFormTextField";
 import { 
     BackgroundBox,
     FormBackgroundPaper,
-    FormTextField
 } from "./LoginAndRegistrationStyles"
 
 export function Registration() {
@@ -33,15 +33,15 @@ export function Registration() {
                             >
                                     Faça o cadastro
                             </Typography>
-                            <FormTextField defaultValue={"Insira o email aqui"} />
-                            <FormTextField defaultValue={"Insira a senha aqui"} />
+                            <CustomFormTextField placeholder="Insira o email aqui" />
+                            <CustomFormTextField placeholder="Insira a senha aqui" />
                             <Typography
                                 align="left"
                                 sx={{ 
                                     fontSize: "12px", 
                                     marginTop: 1 }}
                             >A senha deve conter no mínimo 8 letras</Typography>
-                            <FormTextField defaultValue={"Confirme a senha"} />
+                            <CustomFormTextField placeholder="Confirme a senha" />
                             <CustomButton
                                 onClick={() => {
                                     navigate("/");

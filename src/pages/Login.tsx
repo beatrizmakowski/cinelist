@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../components/CustomButton";
 import { CustomBackground } from "../components/CustomBackground";
 import { CustomLogo } from "../components/CustomLogo";
+import { CustomFormTextField } from "../components/CustomFormTextField";
 import {
   BackgroundBox,
   FormBackgroundPaper,
-  FormTextField,
 } from "./LoginAndRegistrationStyles";
 
 export function Login() {
@@ -29,8 +29,8 @@ export function Login() {
               >
                 Faça o login
               </Typography>
-              <FormTextField defaultValue={"Insira o email aqui"} />
-              <FormTextField defaultValue={"Insira a senha aqui"} />
+              <CustomFormTextField placeholder="Insira o email aqui" />
+              <CustomFormTextField placeholder="Insira a senha aqui" />
               <CustomButton
                 onClick={() => {
                   navigate("/");
