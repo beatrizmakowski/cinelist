@@ -6,7 +6,7 @@ interface CanSeeProps {
 
 export function CanSee({ children }: CanSeeProps) {
   const token = localStorage.getItem("token");
-  if (token) {
+  if (!token) {
     return <>{children}</>;
   }
   return null;

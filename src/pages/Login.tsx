@@ -9,8 +9,6 @@ import {
   CustomPaper,
 } from "../components";
 
-// Components
-
 export function Login() {
   const navigate = useNavigate();
   return (

@@ -19,7 +19,6 @@ interface RegisterForm {
   passwordConfirmation: string;
 }
 
-// Components
 export function Registration() {
   const {
     control,
@@ -75,7 +74,7 @@ export function Registration() {
                   marginTop: 1,
                 }}
               >
-                A senha deve conter no mínimo 8 letras
+                A senha deve conter no mínimo 8 caracteres
               </Typography>
               <CustomFormTextField
                 placeholder="Confirme a senha"
