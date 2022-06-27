@@ -1,0 +1,34 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.x
+      - run: npm install
+      - run: npm run build --if-present
+      - name: Deploy
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: "./dist"
+          production-branch: main
+          github-token: ${{ secrets.DEPLOY_TOKEN }} # Foto do perfil -> settings -> developer settings -> personalaccesstoken -> generate new token with public_repo access
+          deploy-message: "Deploying with GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} #Netlify -> foto do perfil -> user settings -> applications ->  personal access token
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }} # Netlify -> site overview -> site settings
+        timeout-minutes: 1
+# adicionar os secrets no repositorio -> settings -> secrets -> new repository secret
