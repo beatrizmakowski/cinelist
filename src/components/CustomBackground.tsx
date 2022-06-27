@@ -1,7 +1,12 @@
+import { ReactNode } from "react";
 import { Container } from "@mui/material";
 import backgroundImage from '../assets/backgroundImage.png';
 
-export function CustomBackground(props:any) {
+interface CustomBackgroundProps {
+    children: ReactNode;
+}
+
+export function CustomBackground({ children }: CustomBackgroundProps) {
     return (
         <Container
             sx={{
@@ -15,7 +20,7 @@ export function CustomBackground(props:any) {
                 backgroundSize: 'cover',
             }}
         >
-            {props.children}
+            {children}
         </Container>
     );
 }

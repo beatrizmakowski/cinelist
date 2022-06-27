@@ -1,6 +1,11 @@
+import { ReactNode } from "react";
 import { Box } from "@mui/material";
 
-export function CustomBackgroundBox(props: any) {
+interface CustomBackgroundProps {
+  children: ReactNode;
+}
+
+export function CustomBackgroundBox({ children }: CustomBackgroundProps) {
   return (
     <Box
       sx={{
@@ -10,7 +15,7 @@ export function CustomBackgroundBox(props: any) {
         justifyContent: "space-evenly",
       }}
     >
-      {props.children}
+      {children}
     </Box>
   );
 }

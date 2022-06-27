@@ -1,6 +1,11 @@
+import { ReactNode } from "react";
 import { Paper } from "@mui/material";
 
-export function CustomPaper(props: any) {
+interface CustomPaperProps {
+  children: ReactNode;
+}
+
+export function CustomPaper({ children }: CustomPaperProps) {
   return (
     <Paper
       sx={{
@@ -12,7 +17,7 @@ export function CustomPaper(props: any) {
       }}
       elevation={1}
     >
-      {props.children}
+      {children}
     </Paper>
   );
 }
