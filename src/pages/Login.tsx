@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
 import {
   CustomBackground,
   CustomBackgroundBox,
@@ -8,9 +10,34 @@ import {
   CustomLogo,
   CustomPaper,
 } from "../components";
+import { loginSchema } from "../validations";
+import { logUser } from "../services";
+
+interface LoginForm {
+  email: string;
+  password: string;
+}
 
 export function Login() {
   const navigate = useNavigate();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginForm>({
+    resolver: yupResolver(loginSchema),
+    mode: "onChange",
+  }); 
+  console.log(errors);
+
+  async function loginUser(data: LoginForm) {
+    const result = await logUser({
+      email: data.email,
+      password: data.password,
+    });
+  }
+
   return (
     <CustomBackground>
       <CustomBackgroundBox>
@@ -28,12 +55,18 @@ export function Login() {
               >
                 Faça o login
               </Typography>
-              {/* <CustomFormTextField placeholder="Insira o email aqui" />
-              <CustomFormTextField placeholder="Insira a senha aqui" /> */}
+              <CustomFormTextField
+                control={control}
+                name={"email"}
+                placeholder="Insira o email aqui"
+              />
+              <CustomFormTextField
+                control={control}
+                name={"password"}
+                placeholder="Insira a senha aqui"
+              />
               <CustomButton
-                onClick={() => {
-                  navigate("/");
-                }}
+                onClick={handleSubmit(loginUser)}
                 label="Fazer Login"
               />
               <Box
