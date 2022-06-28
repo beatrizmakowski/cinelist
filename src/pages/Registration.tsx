@@ -66,6 +66,7 @@ export function Registration() {
                 control={control}
                 name={"password"}
                 placeholder="Insira a senha aqui"
+                type="password"
               />
               <Typography
                 align="left"
@@ -80,6 +81,7 @@ export function Registration() {
                 placeholder="Confirme a senha"
                 name={"passwordConfirmation"}
                 control={control}
+                type="password"
               />
               <CustomButton
                 onClick={handleSubmit(registerUser)}

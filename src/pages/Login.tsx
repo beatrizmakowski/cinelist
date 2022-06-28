@@ -64,6 +64,7 @@ export function Login() {
                 control={control}
                 name={"password"}
                 placeholder="Insira a senha aqui"
+                type="password"
               />
               <CustomButton
                 onClick={handleSubmit(loginUser)}

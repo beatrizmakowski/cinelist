@@ -6,6 +6,7 @@ interface CustomFormTextFieldProps {
   sx?: SxProps<Theme>;
   control: Control<any, object>;
   name: string;
+  type?: string;
 }
 
 export function CustomFormTextField({
@@ -13,6 +14,7 @@ export function CustomFormTextField({
   name,
   placeholder,
   sx,
+  type
 }: CustomFormTextFieldProps) {
   return (
     <Controller
@@ -33,6 +35,7 @@ export function CustomFormTextField({
             value={value}
             onChange={onChange}
             placeholder={placeholder}
+            type={type}
           />
           {!!error && (
             <FormHelperText sx={{ color: "red", marginTop: 0 }}>
