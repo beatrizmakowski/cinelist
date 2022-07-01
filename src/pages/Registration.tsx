@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
 import {
   CustomBackground,
   CustomBackgroundBox,
@@ -8,10 +10,36 @@ import {
   CustomFormTextField,
   CustomButton,
 } from "../components";
+import { registrationSchema } from "../validations";
+import { createUser } from "../services";
 
-// Components
+interface RegisterForm {
+  email: string;
+  password: string;
+  passwordConfirmation: string;
+}
+
 export function Registration() {
-  const navigate = useNavigate();
+  const {
+    control,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm<RegisterForm>({
+    resolver: yupResolver(registrationSchema),
+    mode: "onChange",
+  });
+  console.log(errors);
+
+  async function registerUser(data: RegisterForm) {
+    const result = await createUser({
+      email: data.email,
+      password: data.password,
+    });
+
+    console.log(result);
+  }
+
   return (
     <CustomBackground>
       <CustomBackgroundBox>
@@ -29,8 +57,16 @@ export function Registration() {
               >
                 Faça o cadastro
               </Typography>
-              <CustomFormTextField placeholder="Insira o email aqui" />
-              <CustomFormTextField placeholder="Insira a senha aqui" />
+              <CustomFormTextField
+                control={control}
+                name={"email"}
+                placeholder="Insira o email aqui"
+              />
+              <CustomFormTextField
+                control={control}
+                name={"password"}
+                placeholder="Insira a senha aqui"
+              />
               <Typography
                 align="left"
                 sx={{
@@ -38,13 +74,15 @@ export function Registration() {
                   marginTop: 1,
                 }}
               >
-                A senha deve conter no mínimo 8 letras
+                A senha deve conter no mínimo 8 caracteres
               </Typography>
-              <CustomFormTextField placeholder="Confirme a senha" />
+              <CustomFormTextField
+                placeholder="Confirme a senha"
+                name={"passwordConfirmation"}
+                control={control}
+              />
               <CustomButton
-                onClick={() => {
-                  navigate("/");
-                }}
+                onClick={handleSubmit(registerUser)}
                 label="Realizar Cadastro"
                 sx={{ marginTop: 8 }}
               />

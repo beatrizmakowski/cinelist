@@ -1,22 +1,46 @@
-import { InputBase, SxProps, Theme, } from "@mui/material";
+import { Box, FormHelperText, InputBase, SxProps, Theme } from "@mui/material";
+import { Control, Controller, FieldValues } from "react-hook-form";
 
 interface CustomFormTextFieldProps {
-    placeholder: string;
-    sx?: SxProps<Theme>;
+  placeholder: string;
+  sx?: SxProps<Theme>;
+  control: Control<any, object>;
+  name: string;
 }
 
-export function CustomFormTextField({ placeholder, sx }: CustomFormTextFieldProps) {
-    return (
-        <InputBase
+export function CustomFormTextField({
+  control,
+  name,
+  placeholder,
+  sx,
+}: CustomFormTextFieldProps) {
+  return (
+    <Controller
+      control={control}
+      name={name}
+      render={({ field: { onChange, value }, fieldState: { error } }) => (
+        <Box>
+          <InputBase
+            fullWidth
             sx={{
-                color: "white",
-                border: "1px solid white",
-                borderRadius: "6px",
-                paddingLeft: "30px",
-                height: "64px",
-                ...sx
+              color: "white",
+              border: `1px solid ${!!error ? "red" : "white"}`,
+              borderRadius: "6px",
+              paddingLeft: "30px",
+              height: "64px",
+              ...sx,
             }}
+            value={value}
+            onChange={onChange}
             placeholder={placeholder}
-        />
-    );
+          />
+          {!!error && (
+            <FormHelperText sx={{ color: "red", marginTop: 0 }}>
+              {error.message}
+            </FormHelperText>
+          )}
+        </Box>
+      )}
+    />
+  );
 }

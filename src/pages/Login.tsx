@@ -9,8 +9,6 @@ import {
   CustomPaper,
 } from "../components";
 
-// Components
-
 export function Login() {
   const navigate = useNavigate();
   return (
@@ -30,8 +28,8 @@ export function Login() {
               >
                 Faça o login
               </Typography>
-              <CustomFormTextField placeholder="Insira o email aqui" />
-              <CustomFormTextField placeholder="Insira a senha aqui" />
+              {/* <CustomFormTextField placeholder="Insira o email aqui" />
+              <CustomFormTextField placeholder="Insira a senha aqui" /> */}
               <CustomButton
                 onClick={() => {
                   navigate("/");
